@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9596ACEE-0101-6165-4A3F-120BB6E83EBA}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ddraw7fix</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\Win32\Debug\</OutDir>
+    <IntDir>obj\Win32\Debug\</IntDir>
+    <TargetName>ddraw7fix</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin\Win32\Release\</OutDir>
+    <IntDir>obj\Win32\Release\</IntDir>
+    <TargetName>ddraw7fix</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;_WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_USE_32BIT_TIME_T;_USRDLL;_WIN32_WINNT=0x0600;_WINDLL;_WINDOWS;DDRAW7FIX;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>bin\Win32\Debug\ddraw7fix.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;_WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_USE_32BIT_TIME_T;_USRDLL;_WIN32_WINNT=0x0600;_WINDLL;_WINDOWS;DDRAW7FIX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImportLibrary>bin\Win32\Release\ddraw7fix.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="detours\detours.h" />
+    <ClInclude Include="detours\detver.h" />
+    <ClInclude Include="loguru.h" />
+    <ClInclude Include="proxy\proxyIDirect3D.h" />
+    <ClInclude Include="proxy\proxyIDirect3D2.h" />
+    <ClInclude Include="proxy\proxyIDirect3D3.h" />
+    <ClInclude Include="proxy\proxyIDirect3D7.h" />
+    <ClInclude Include="proxy\proxyIDirect3DDevice.h" />
+    <ClInclude Include="proxy\proxyIDirect3DDevice2.h" />
+    <ClInclude Include="proxy\proxyIDirect3DDevice3.h" />
+    <ClInclude Include="proxy\proxyIDirect3DDevice7.h" />
+    <ClInclude Include="proxy\proxyIDirect3DExecuteBuffer.h" />
+    <ClInclude Include="proxy\proxyIDirect3DLight.h" />
+    <ClInclude Include="proxy\proxyIDirect3DMaterial.h" />
+    <ClInclude Include="proxy\proxyIDirect3DMaterial2.h" />
+    <ClInclude Include="proxy\proxyIDirect3DMaterial3.h" />
+    <ClInclude Include="proxy\proxyIDirect3DTexture.h" />
+    <ClInclude Include="proxy\proxyIDirect3DTexture2.h" />
+    <ClInclude Include="proxy\proxyIDirect3DVertexBuffer.h" />
+    <ClInclude Include="proxy\proxyIDirect3DVertexBuffer7.h" />
+    <ClInclude Include="proxy\proxyIDirect3DViewport.h" />
+    <ClInclude Include="proxy\proxyIDirectDraw.h" />
+    <ClInclude Include="proxy\proxyIDirectDraw2.h" />
+    <ClInclude Include="proxy\proxyIDirectDraw4.h" />
+    <ClInclude Include="proxy\proxyIDirectDraw7.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawClipper.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawColorControl.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawGammaControl.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawPalette.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawSurface.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawSurface2.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawSurface3.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawSurface4.h" />
+    <ClInclude Include="proxy\proxyIDirectDrawSurface7.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ddraw7fix.cc" />
+    <ClCompile Include="detours\creatwth.cpp" />
+    <ClCompile Include="detours\detours.cpp" />
+    <ClCompile Include="detours\disasm.cpp" />
+    <ClCompile Include="detours\disolarm.cpp" />
+    <ClCompile Include="detours\disolarm64.cpp" />
+    <ClCompile Include="detours\disolia64.cpp" />
+    <ClCompile Include="detours\disolx64.cpp" />
+    <ClCompile Include="detours\disolx86.cpp" />
+    <ClCompile Include="detours\image.cpp" />
+    <ClCompile Include="detours\modules.cpp" />
+    <ClCompile Include="loguru.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3D.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3D2.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3D3.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3D7.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DDevice.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DDevice2.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DDevice3.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DDevice7.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DExecuteBuffer.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DLight.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DMaterial.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DMaterial2.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DMaterial3.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DTexture.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DTexture2.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DVertexBuffer.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DVertexBuffer7.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3DViewport.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDraw.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDraw2.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDraw4.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDraw7.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawClipper.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawColorControl.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawGammaControl.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawPalette.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawSurface.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawSurface2.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawSurface3.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawSurface4.cpp" />
+    <ClCompile Include="proxy\proxyIDirectDrawSurface7.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

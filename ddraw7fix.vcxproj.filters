@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="detours">
+      <UniqueIdentifier>{AB598A09-1739-09A5-2051-947B8CAF6F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proxy">
+      <UniqueIdentifier>{E7232A10-5338-52C1-1CBA-F520888D4EF2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="detours\detours.h">
+      <Filter>detours</Filter>
+    </ClInclude>
+    <ClInclude Include="detours\detver.h">
+      <Filter>detours</Filter>
+    </ClInclude>
+    <ClInclude Include="loguru.h" />
+    <ClInclude Include="proxy\proxyIDirect3D.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3D2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3D3.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3D7.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DDevice.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DDevice2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DDevice3.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DDevice7.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DExecuteBuffer.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DLight.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DMaterial.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DMaterial2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DMaterial3.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DTexture.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DTexture2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DVertexBuffer.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DVertexBuffer7.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirect3DViewport.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDraw.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDraw2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDraw4.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDraw7.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawClipper.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawColorControl.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawGammaControl.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawPalette.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawSurface.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawSurface2.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawSurface3.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawSurface4.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxyIDirectDrawSurface7.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ddraw7fix.cc" />
+    <ClCompile Include="detours\creatwth.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\detours.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disasm.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disolarm.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disolarm64.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disolia64.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disolx64.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\disolx86.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\image.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="detours\modules.cpp">
+      <Filter>detours</Filter>
+    </ClCompile>
+    <ClCompile Include="loguru.cpp" />
+    <ClCompile Include="proxy\proxyIDirect3D.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3D2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3D3.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3D7.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DDevice.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DDevice2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DDevice3.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DDevice7.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DExecuteBuffer.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DLight.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DMaterial.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DMaterial2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DMaterial3.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DTexture.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DTexture2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DVertexBuffer.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DVertexBuffer7.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirect3DViewport.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDraw.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDraw2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDraw4.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDraw7.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawClipper.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawColorControl.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawGammaControl.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawPalette.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawSurface.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawSurface2.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawSurface3.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawSurface4.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy\proxyIDirectDrawSurface7.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
